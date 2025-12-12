@@ -43,7 +43,7 @@ RSS_FILE="rss.xml"
 
     echo '    <item>'
     echo "      <title>${title}</title>"
-    echo "      <enclosure url=\"${url}\" type=\"audio/mp4\" length=\"${size}\" />"
+    echo "      <enclosure url=\"${url}\" type=\"audio/x-m4a\" length=\"${size}\" />"
     echo "      <guid>${guid}</guid>"
     echo "      <pubDate>${PUBDATE}</pubDate>"
     echo '    </item>'
