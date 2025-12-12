@@ -54,17 +54,3 @@ RSS_FILE="rss.xml"
 } > "${RSS_FILE}"
 
 echo "Wrote ${EP_DIR}/${RSS_FILE}"
-
-# Go back to repo root for git commands
-cd - >/dev/null
-
-# Ensure we are in a git repo; init if needed
-if ! git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
-  git init
-fi
-
-git add "${EP_DIR}/rss.xml" "${EP_DIR}"/dont_*.m4a
-git commit -m "Add Don't Shoot The Dog podcast feed and episodes" || {
-  echo "Nothing to commit (perhaps already committed)."
-}
-
